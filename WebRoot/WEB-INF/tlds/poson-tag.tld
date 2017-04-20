@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE taglib
+
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+
+  <tlibversion>1.0</tlibversion>
+
+  <jspversion>1.1</jspversion>
+
+  <shortname>poson Tag Library</shortname>
+
+  <uri>http://www.poson.con.cn</uri>
+
+  <info>
+
+    This tag library contains functionality specific to the suntek web Application.
+
+  </info>
+
+  <tag>
+  	<name>donekey</name>
+  	<tagclass>com.poson.core.util.DoneKeyColorTag</tagclass>
+  	<bodycontent>jsp</bodycontent>
+  	<info>对关键字进行增加颜色</info>
+  	<attribute>
+  		<name>src</name>
+  		<required>true</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>keyStr</name>
+  		<required>true</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>color</name>
+  		<required>false</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  </tag>
+</taglib>
+

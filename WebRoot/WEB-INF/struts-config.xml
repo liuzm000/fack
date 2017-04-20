@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "struts-config_1_1.dtd">
+<!--
+	This is the Struts configuration file for the example application,
+	using the proposed new syntax.
+-->
+<struts-config>
+	<form-beans>
+		<form-bean name="spForm"
+			type="cn.eshore.mismp.version.domain.form.SpForm" />
+		<form-bean name="productForm"
+			type="cn.eshore.mismp.version.domain.form.ProductForm" />
+		<form-bean name="softTypeForm"
+			type="cn.eshore.mismp.version.domain.form.SoftTypeForm" />
+	</form-beans>
+
+	<!-- ======== Global Exception Definitions -->
+	<global-exceptions>
+		<exception type="java.lang.Exception" key="errors.general"
+			handler="cn.eshore.mismp.version.common.ActionExceptionHandler" />
+	</global-exceptions>
+	<!-- ======== Global Forward Definitions -->
+
+	<global-forwards>
+		<forward name="success" path="" />
+		<forward name="fail" path="" />
+		<forward name="error"
+			path="/WEB-INF/pages/common/error/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/spManage"
+			type="cn.eshore.mismp.version.action.TreeViewAction" scope="request"
+			parameter="action" input="">
+			<forward name="listAllProducts" path="/version/rightPage.jsp" />
+			<forward name="softTypeList" path="/version/rightPage.jsp" />
+		</action>
+		<action path="/version/operator"  name="softTypeForm" attribute="softTypeForm"
+		        type="cn.eshore.mismp.version.action.VersionOperAction"
+		        scope="request" parameter="action" validate="false">
+		  <forward name="doNew" path="/version/softTypeEdit.jsp" />
+		  <forward name="doEdit" path="/version/softTypeEdit.jsp" />
+		  <forward name="addNewVersion" path="/version/versionList.jsp" />
+		  <forward name="doAddVersion" path="/version/versionEdit.jsp" />
+		  <forward name="doEditVersion" path="/version/versionEdit.jsp" />
+		  <forward name="list" path="/version/redirect.jsp" />
+		  <forward name="showVersionList" path="/version/versionList.jsp" />
+		  <forward name="doMatch" path="/version/terminalMatchEdit.jsp" />
+		  <forward name="doMatchGroup" path="/version/groupMatchEdit.jsp" />
+		  <forward name="doMatchVersionGroup" path="/version/groupVersionMatchEdit.jsp" />
+		</action>
+		<action path="/college"  name="softTypeForm" attribute="softTypeForm"
+		        type="cn.eshore.mismp.version.action.CollegeAction"
+		        scope="request" parameter="action" validate="false">
+		  <forward name="doUpload" path="/version/collegeEdit.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

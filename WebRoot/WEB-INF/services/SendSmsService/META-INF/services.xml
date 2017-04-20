@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.4.1  Built on : Aug 13, 2008 (05:03:35 LKT) -->
+<serviceGroup>
+    <service name="SendSmsService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="cn.eshore.mismp.sms.ws.send.SendSmsServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">cn.eshore.mismp.sms.ws.send.SendSmsServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="sendSms" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://send.ws.sms.mismp.eshore.cn">
+            <actionMapping>urn:sendSms</actionMapping>
+            <outputActionMapping>urn:sendSmsResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

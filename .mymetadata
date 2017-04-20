@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="wqsManager"
+  id="myeclipse.1456196835709"
+  context-root="/wqsManager"
+  j2ee-spec="6.0"
+  archive="wqsManager.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

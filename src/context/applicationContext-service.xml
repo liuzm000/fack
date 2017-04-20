@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 系统管理实现 -->
+	<bean id="systemServiceImpl" class="cn.eshore.mismp.system.service.impl.SystemServiceImpl">
+		<property name="userDAO">
+			<ref bean="userDAO" />
+		</property>
+		<property name="moduleDAO">
+			<ref bean="moduleDAO" />
+		</property>
+		<property name="roleDAO">
+			<ref bean="roleDAO" />
+		</property>
+		<property name="rolePermissionDAO">
+			<ref bean="rolePermissionDAO" />
+		</property>
+	</bean>
+
+	<!-- SP管理服务 -->
+	<bean id="spService" class="cn.eshore.mismp.spmanager.service.impl.SpServiceImpl">
+		<property name="spDAO">
+			<ref bean="spDAO" />
+		</property>
+	</bean>
+
+
+	<!-- version parts -->
+	<bean id="treeViewService"
+		class="cn.eshore.mismp.version.service.impl.TreeViewServiceImpl">
+		<property name="treeViewDAO">
+			<ref bean="treeViewDAO" />
+		</property>
+	</bean>
+	<bean id="versionOperService"
+		class="cn.eshore.mismp.version.service.impl.VersionOperServiceImpl">
+		<property name="versionOperDAO">
+			<ref bean="versionOperDAO" />
+		</property>
+	</bean>
+
+	<!-- 系统管理事务代理 -->
+	<bean id="systemService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="systemServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="create*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 终端用户管理实现 -->
+	<bean id="customerServiceImpl"
+		class="cn.eshore.mismp.customer.service.impl.CustomerServiceImpl">
+		<property name="customerDAO">
+			<ref bean="customerDAO" />
+		</property>
+	</bean>
+
+	<!-- 终端用户管理事务代理 -->
+	<bean id="customerService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="customerServiceImpl" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="create*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	
+	
+	<!-- wqs service added by jianghuan  -->
+	<bean id="wqsTravelServiceImpl" class="cn.eshore.mismp.wqs.service.impl.WqsTravelServiceImpl">
+		<property name="wqsTravelDAO">
+			<ref bean="wqsTravelDAO" />
+		</property>
+	</bean>
+	<bean id="wqsTravelService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="wqsTravelServiceImpl" />
+		</property>
+		<property name="transactionAttributes" >
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="create*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- wqs service added by jianghuan  -->
+	<bean id="pubBusinessServiceImpl" class="cn.eshore.mismp.business.service.impl.PubBusinessServiceImpl">
+		<property name="pubBusinessDAO">
+			<ref bean="pubBusinessDAO" />
+		</property>
+	</bean>
+	<bean id="pubBusinessService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="target">
+			<ref bean="pubBusinessServiceImpl" />
+		</property>
+		<property name="transactionAttributes" >
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="create*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+	
+	
+</beans>

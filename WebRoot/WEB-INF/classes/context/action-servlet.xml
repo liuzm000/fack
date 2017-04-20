@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-lazy-init="true">
+
+<!--	渔家乐，主要对其信息进行查询和编辑-->
+	<bean id="yuJiaLeAction" class="cn.eshore.mismp.wqs.action.YuJiaLeAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+<!--	农家乐-->
+	<bean id="nongJiaLeAction" class="cn.eshore.mismp.wqs.action.NongJiaLeAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+<!--	美丽乡村-->
+	<bean id="beautifulCountryAction" class="cn.eshore.mismp.wqs.action.BeautifulCountryAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+
+<!--生态旅游-->
+	<bean id="ecoTourismAction" class="cn.eshore.mismp.wqs.action.EcoTourismAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+	<!-- 名镇信息 沙田画卷 2013-03-28-->
+	<bean id="wqsTownPicturetAction" class="cn.eshore.mismp.wqs.action.TownPictureAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 名镇信息 企业名录  2013-03-5-->
+	<bean id="wqsTownEntAction" class="cn.eshore.mismp.wqs.action.TownEntAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<bean id="wqsBookingAction" class="cn.eshore.mismp.wqs.action.BookingAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+
+	<!-- 万顷沙 配置  2012-12-25-->
+	<bean id="interfaceAction" class="cn.eshore.mismp.business.action.InterfaceAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<bean id="nsTravelFeedbackAction" class="cn.eshore.mismp.wqs.action.NsTravelFeedbackAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	<bean id="wqsTownVideoAction" class="cn.eshore.mismp.wqs.action.TownVideoAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<bean id="wqsTownMsgAction" class="cn.eshore.mismp.wqs.action.TownMsgAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	<bean id="wqsHospitalAction" class="cn.eshore.mismp.wqs.action.HospitalAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	<bean id="wqsTrafficReguAction" class="cn.eshore.mismp.wqs.action.TrafficAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	
+	<!-- 主页action -->
+	<bean id="homeAction" class="cn.eshore.mismp.system.web.action.HomeAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	<!-- 权限管理action -->
+	<bean id="permissionAction" class="cn.eshore.mismp.system.web.action.PermissionAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+		<!-- SP管理action -->
+	<bean id="spAction" class="cn.eshore.mismp.spmanager.web.action.SpAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	<!-- 软件管理action -->
+	<bean id="versionAction" class="cn.eshore.mismp.version.action.VersionAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property> 
+	</bean>	
+	
+	<!-- 农特产品action -->
+	<bean id="specificFarmProduceAction" class="cn.eshore.mismp.wqs.action.SpecificFarmProduceAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<!-- 酒店信息管理action -->
+	<bean id="hotelAction" class="cn.eshore.mismp.wqs.action.HotelAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<bean id="restaurantAction" class="cn.eshore.mismp.wqs.action.RestaurantAction" singleton="false">
+		<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	<!-- END -->
+</beans>

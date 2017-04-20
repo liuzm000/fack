@@ -1,0 +1,45 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<package name="customer" extends="default" namespace="/customer">
+		<action name="terUserList" class="customerAction" method="terUserList">
+			<result>/WEB-INF/pages/customer/terUserList.ftl</result>
+		</action>
+		<action name="terUserDetail" class="customerAction" method="terUserDetail">
+			<result>/WEB-INF/pages/customer/terUserDetail.ftl</result>
+		</action>
+		<action name="terUserSearch" class="customerAction" method="terUserSearch">
+			<result>/WEB-INF/pages/customer/terUserList.ftl</result>
+		</action>
+		<action name="terUserOrderList" class="customerOrderAction" method="terUserOrderList">
+			<result>/WEB-INF/pages/customer/terUserOrderList.ftl</result>
+		</action>
+		<action name="terUserOrderSearch" class="customerOrderAction" method="terUserOrderSearch">
+			<result>/WEB-INF/pages/customer/terUserOrderList.ftl</result>
+		</action>
+		<action name="terUserOrderDetail" class="customerOrderAction" method="terUserOrderDetail">
+			<result>/WEB-INF/pages/customer/terUserOrderEdit.ftl</result>
+		</action>
+		<action name="terUserOrderEdit" class="customerOrderAction" method="terUserOrderEdit">
+			<result name="success">/WEB-INF/pages/customer/terUserOrderEditSuc.ftl</result>
+		</action>
+		<action name="terUserGroupList" class="customerGroupAction" method="terUserGroupList">
+			<result>/WEB-INF/pages/customer/terUserGroupList.ftl</result>
+		</action>
+		<action name="addTerUserGroup" class="customerGroupAction" method="addTerUserGroup">
+			<result>/WEB-INF/pages/customer/terUserGroupAdd.ftl</result>
+		</action>
+		<action name="saveTerUserGroup" class="customerGroupAction" method="saveTerUserGroup">
+			<result name="success" type="redirect">/customer/terUserGroupList.action</result>
+		</action>
+		<action name="editTerUserGroup" class="customerGroupAction" method="editTerUserGroup">
+			<result>/WEB-INF/pages/customer/terUserGroupEdit.ftl</result>
+		</action>
+		<action name="updateTerUserGroup" class="customerGroupAction" method="updateTerUserGroup">
+			<result name="success" type="redirect">/customer/terUserGroupList.action</result>
+		</action>
+		<action name="deleteTerUserGroup" class="customerGroupAction" method="deleteTerUserGroup">
+			<result name="success" type="redirect">/customer/terUserGroupList.action</result>
+		</action>
+	</package>
+</xwork>

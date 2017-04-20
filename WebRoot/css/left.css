@@ -1,0 +1,25 @@
+/* CSS Document */
+/*全局的样式设置*/
+body{
+    background-color:#EEF7FF;
+	line-height: 18px;
+	font-family:Arial, Verdana,  Helvetica, sans-serif;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+
+}
+
+
+img{border:0px;}
+
+a:link , a:visited {color:#393939;text-decoration: none;}
+a:hover { color: #f60; text-decoration: none;}
+.table,td{font-size: 12px;
+	     line-height:18px;
+	     font-family:Arial, Verdana,  Helvetica, sans-serif;color: #393939;}
+
+
+

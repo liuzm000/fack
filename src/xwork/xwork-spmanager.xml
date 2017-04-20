@@ -1,0 +1,101 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<!-- 业务管理-->
+	<package name="spmanager" extends="default" namespace="/sp">
+		<!-- SP管理-->
+		<action name="spInfo" class="spAction" method="spInfo">
+			<result name="success">/WEB-INF/pages/sp/spInfo.ftl</result>
+			<result name="delfail">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="spAdd" class="spAction" method="spAdd">
+			<result name="success">/WEB-INF/pages/sp/spAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="spModify" class="spAction" method="spModify">
+			<result name="success">/WEB-INF/pages/sp/spModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<!-- 设备厂商管理-->
+		<action name="facInfo" class="spAction" method="facInfo">
+			<result name="success">/WEB-INF/pages/sp/facInfo.ftl</result>
+			<result name="delfail">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="facAdd" class="spAction" method="facAdd">
+			<result name="success">/WEB-INF/pages/sp/facAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="facModify" class="spAction" method="facModify">
+			<result name="success">/WEB-INF/pages/sp/facModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<!-- 虚拟类型管理-->
+		<action name="virInfo" class="spAction" method="virInfo">
+			<result name="success">/WEB-INF/pages/sp/virInfo.ftl</result>
+			<result name="delfail">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="virAdd" class="spAction" method="virAdd">
+			<result name="success">/WEB-INF/pages/sp/virAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="virModify" class="spAction" method="virModify">
+			<result name="success">/WEB-INF/pages/sp/virModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<!-- 机型设备管理-->
+		<action name="terInfo" class="spAction" method="terInfo">
+			<result name="success">/WEB-INF/pages/sp/terInfo.ftl</result>
+		</action>
+		<action name="terAdd" class="spAction" method="terAdd">
+		 			<interceptor-ref name="fileUploadStack"/>
+	    			<interceptor-ref name="myDefaultWebStack"/>
+			<result name="success">/WEB-INF/pages/sp/terAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="terModify" class="spAction" method="terModify">
+			<result name="success">/WEB-INF/pages/sp/terModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<!-- SP产品接入管理-->
+		<action name="proInfo" class="spAction" method="proInfo">
+			<result name="success">/WEB-INF/pages/sp/proInfo.ftl</result>
+			<result name="delfail">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="proAdd" class="spAction" method="proAdd">
+			<result name="success">/WEB-INF/pages/sp/proAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="proModify" class="spAction" method="proModify">
+			<result name="success">/WEB-INF/pages/sp/proModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<!-- SP软件审核管理-->
+		<action name="svInfo" class="spAction" method="svInfo">
+			<result name="success">/WEB-INF/pages/sp/svInfo.ftl</result>
+		</action>
+		<action name="svAudit" class="spAction" method="svAudit">
+			<result name="success">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="svDetail" class="spAction" method="svDetail">
+			<result name="success">/WEB-INF/pages/sp/svDetail.ftl</result>
+		</action>
+		<!-- 产品类型管理 20091208 -->
+		<action name="ptInfo" class="spAction" method="ptInfo">
+			<result name="success">/WEB-INF/pages/sp/ptInfo.ftl</result>
+			<result name="delfail">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="ptAdd" class="spAction" method="ptAdd">
+			<interceptor-ref name="fileUploadStack"/>
+	    	<interceptor-ref name="myDefaultWebStack"/>
+			<result name="success">/WEB-INF/pages/sp/ptAdd.ftl</result>
+			<result name="addok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+		<action name="ptModify" class="spAction" method="ptModify">
+			<interceptor-ref name="fileUploadStack"/>
+	    	<interceptor-ref name="myDefaultWebStack"/>
+			<result name="success">/WEB-INF/pages/sp/ptModify.ftl</result>
+			<result name="modifyok">/WEB-INF/pages/redirect.ftl</result>
+		</action>
+	</package>
+
+</xwork>

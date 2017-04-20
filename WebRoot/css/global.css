@@ -1,0 +1,126 @@
+/*全局的样式设置*/
+*{margin:0;padding:0}
+body{
+    background:#EEF7FF;
+	line-height: 18px;
+	font-family:Arial, Verdana,  Helvetica, sans-serif;
+	font-size:12px;
+	margin:0 5px;
+	padding:0;
+}
+
+img{border:0}
+
+
+a:link , a:visited {color:#393939;text-decoration: none;}
+a:hover { color: #f60; text-decoration: none;}
+table,td{font-size: 12px;
+	     line-height:17px;
+	     font-family:Arial, Verdana,  Helvetica, sans-serif;color: #393939;}
+ul{list-style-type:none;}
+input{
+	border:1px solid #7F9DB9;
+	background-color:#FFF;
+	font-size:12px;
+	line-height:14px;
+	height:16px;
+	padding-left:2px;
+}
+input:hover{
+	background-color:#EEF5FD;
+}
+
+.notext{
+	border:0;
+	height:14px;
+	}
+
+select{ 
+    background-color:#FFF;
+	color:#363636;
+	font-size:12px;
+	line-height:18px; 
+	height:19px;
+	padding-left:3px;
+}
+.title{font-weight:bold; color:#0B41A5; line-height:22px; padding-left:12px;}	
+.top{
+	background:url(../images/main/all_t_bg.gif) repeat-x;
+	height:36px;	
+}
+
+.topleft{
+	background:url(../images/main/all_t_l.gif) no-repeat;
+	float:left;
+	width:21px;
+	height:36px;
+}
+
+.topright{
+	background:url(../images/main/all_t_r.gif) no-repeat;
+	float:right;
+	width:21px;
+	height:36px;
+}
+.tmiddle{
+	background:#FFF;
+	border-right:#D9E3EF 1px solid;
+	border-left:#D9E3EF 1px solid;	
+}
+.boxsearch{
+	padding:5px;
+	margin-left:20px;
+	margin-right:20px;
+    border:#E9E9E9 1px solid;
+	background:url(../images/main/search_down.gif) repeat-x bottom }
+}
+.clear{clear:both}
+
+.bottom{
+	background:url(../images/main/all_d_bg.gif) repeat-x;
+	height:36px;	
+}
+.bottomleft{
+	float:left;
+	width:21px;
+	height:36px;
+	background: url(../images/main/all_d_l.gif) no-repeat;	
+}
+
+.bottomright{
+	float:right;
+	width:21px;
+	height:36px;
+	background: url(../images/main/all_d_r.gif) no-repeat;
+}
+.boxsearch2{text-align:center;}
+.grayline{
+	margin:10px 5px;
+	background:#F3F3F3;
+	height:1px;}
+.tablebox{padding:5px 20px;}
+	
+	/****************  列表样式  **********************/
+.listTab { width:100%; border:1px #afccea solid;border-collapse: collapse }
+.listTab th{ border:1px #b2bbcc solid; background:url(../images/main/listTabTitleBg.gif) no-repeat right; height:24px; line-height:24px; color:#323433; font-size:12px; word-break:keep-all; white-space:nowrap; padding:0px 10px; }
+.listTab .listTabTh2 {background:url(../images/main/listTabTitleBg.gif) no-repeat left;  padding:0px 10px; }
+.listTab td {border:1px #cfd3ee solid; height:20px; line-height:20px; color:#323433;  padding:0px 4px; }
+/*******  列表样式  鼠标事件颜色  *******/
+.row_over td{background:#b8d1f0; }
+.row_out td{background:#FFFFFF; }
+/*******  列表样式    *******/
+.tab_info{border:solid 1px #afccea }
+.tab_info td { height:28px; line-height:28px; padding:0px 4px; word-break:keep-all; white-space:nowrap; }
+.checkinput { border: 0px; width:auto;}
+/*******  翻页    *******/
+.box_fanye{  height:28px;padding-right:15px;background-color:#F7F7F7; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#696969;
+        border-right:#afccea 1px solid;
+        border-left:#afccea 1px solid;
+		border-top:none;
+		border-bottom:#afccea 1px solid;}
+.box_gongneng{ width:98%; height:28px; margin-top:30px;}
+.box_gongneng2{ width:98%; height:28px;}
+
+a.redfontvha:link , a.redfontvha:visited {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color:4476A3;text-decoration: underline;}
+a.redfontvha:hover {font-family: Arial, Helvetica, sans-serif;	font-size: 12px;color: #f60; text-decoration: underline;}
+.orange{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#FF6600; line-height:18px;}

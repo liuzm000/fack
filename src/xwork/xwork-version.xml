@@ -1,0 +1,10 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<!-- 版本管理-->
+	<package name="version" extends="default" namespace="/version">
+		<action name="index" class="versionAction" method="index">
+			<result name="success">/WEB-INF/pages/version/versionindex.html</result>
+		</action>
+	</package>
+</xwork>

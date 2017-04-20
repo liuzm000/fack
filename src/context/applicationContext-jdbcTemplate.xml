@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 系统管理DAO bean -->
+	<bean id="userDAO" class="cn.eshore.mismp.system.dao.impl.UserDAOImpl" parent="jdbcTemplate"/>
+	<bean id="moduleDAO" class="cn.eshore.mismp.system.dao.impl.ModuleDAOImpl" parent="jdbcTemplate"/>
+	<bean id="roleDAO" class="cn.eshore.mismp.system.dao.impl.RoleDAOImpl" parent="jdbcTemplate"/>
+	<bean id="rolePermissionDAO" class="cn.eshore.mismp.system.dao.impl.RolePermissionDAOImpl" parent="jdbcTemplate"/>
+	<bean id="spDAO" class="cn.eshore.mismp.spmanager.dao.impl.SpDAOImpl" parent="jdbcTemplate"/>
+	<bean id="customerDAO" class="cn.eshore.mismp.customer.dao.impl.CustomerDAOImpl" parent="jdbcTemplate"/>
+	<!-- version DAO bean added by wanglei 2009-06-14-->
+	<bean id="treeViewDAO" class="cn.eshore.mismp.version.dao.impl.TreeViewDAOImpl" parent="jdbcTemplate"/>
+	<bean id="versionOperDAO" class="cn.eshore.mismp.version.dao.impl.VersionOperDAOImpl" parent="jdbcTemplate"/>
+	<!-- wqs DAO bean added by jianghuan 2012-12-19 -->
+	<bean id="wqsTravelDAO" class="cn.eshore.mismp.wqs.dao.impl.WqsTravelDAOImpl" parent="jdbcTemplate">
+		<property name="lobHandler">
+			<ref bean="lobHandler" />
+		</property>
+	</bean>
+	<!-- pubBusiness DAO bean added by jianghuan 2012-12-19 -->
+	<bean id="pubBusinessDAO" class="cn.eshore.mismp.business.dao.impl.PubBusinessDAOImpl" parent="jdbcTemplate"/>
+</beans>

@@ -1,0 +1,588 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<package name="wqstravel" extends="default" namespace="/wqstravel">
+	
+	<!--	农家乐-->
+	<action name="getYujiaInfo" class="yuJiaLeAction" method="getYujiaInfo">
+			<result name="success">/WEB-INF/pages/wqstravel/yujiale/yujialeList.ftl</result>
+	</action>
+	
+	
+	<action name="toEditYuJiaLe" class="yuJiaLeAction" method="toEditYuJiaLe">
+			<result name="success">/WEB-INF/pages/wqstravel/yujiale/yujialeEdit.ftl</result>
+	</action>
+	
+	
+	<action name="doYuJiaLeEdit" class="yuJiaLeAction" method="doYuJiaLeEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--	农家乐-->
+	<action name="getNongJiaLeList" class="nongJiaLeAction" method="getNongJiaLeList">
+			<result name="success">/WEB-INF/pages/wqstravel/nongjiale/nongjialeList.ftl</result>
+	</action>
+	
+	<action name="toAddNongJiaLe" class="nongJiaLeAction" method="toAddNongJiaLe">
+			<result name="success">/WEB-INF/pages/wqstravel/nongjiale/nongjialeAdd.ftl</result>
+	</action>
+	
+	<action name="doNongJiaLeAdd" class="nongJiaLeAction" method="doNongJiaLeAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	<action name="toEditNongJiaLe" class="nongJiaLeAction" method="toEditNongJiaLe">
+			<result name="success">/WEB-INF/pages/wqstravel/nongjiale/nongjialeEdit.ftl</result>
+	</action>
+	
+	<action name="doNongJiaLeEdit" class="nongJiaLeAction" method="doNongJiaLeEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	<action name="doNongJiaLeDelete" class="nongJiaLeAction" method="doNongJiaLeDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--	生态旅游-->
+	<action name="getEcotourismTypeList" class="ecoTourismAction" method="getEcotourismTypeList">
+			<result name="success">/WEB-INF/pages/wqstravel/ecotourism/ecotourismTypeList.ftl</result>
+	</action>
+	
+	
+	<action name="toAddEcotourismType" class="ecoTourismAction" method="toAddEcotourismType">
+			<result name="success">/WEB-INF/pages/wqstravel/ecotourism/ecotourismTypeAdd.ftl</result>
+	</action>
+	
+	
+	<action name="doEcotourismTypeSave" class="ecoTourismAction" method="doEcotourismTypeSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	<action name="doEcotourismTypeDelete" class="ecoTourismAction" method="doEcotourismTypeDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	<action name="toEcotourismTypeEdit" class="ecoTourismAction" method="toEcotourismTypeEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/ecotourism/ecotourismTypeEdit.ftl</result>
+	</action>
+	
+	
+	<action name="doEcotourismTypeEdit" class="ecoTourismAction" method="doEcotourismTypeEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	<action name="viewEcotourismList" class="ecoTourismAction" method="viewEcotourismList">
+			<result name="success">/WEB-INF/pages/wqstravel/ecotourism/ecotourismList.ftl</result>
+	</action>
+	
+	
+	<action name="doEcotourismDelete" class="ecoTourismAction" method="doEcotourismDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	<action name="toEcotourismEdit" class="ecoTourismAction" method="toEcotourismEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/ecotourism/ecotourismEdit.ftl</result>
+	</action>
+	
+	<action name="doEcotourismEdit" class="ecoTourismAction" method="doEcotourismEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+	</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- 美丽乡村-->
+		<action name="getBeautifulCountryList" class="beautifulCountryAction" method="getBeautifulCountryList">
+			<result name="success">/WEB-INF/pages/wqstravel/country/countryList.ftl</result>
+		</action>
+	
+		<action name="toAddBeautifulCountry" class="beautifulCountryAction" method="toAddBeautifulCountry">
+			<result name="success">/WEB-INF/pages/wqstravel/country/countryAdd.ftl</result>
+		</action>
+	
+	
+	
+		<action name="doCountrySave" class="beautifulCountryAction" method="doCountrySave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+	
+	
+		<action name="doBeautifulCountryDelete" class="beautifulCountryAction" method="doBeautifulCountryDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+	
+	
+		<action name="toEditBeautifulCountry" class="beautifulCountryAction" method="toEditBeautifulCountry">
+			<result name="success">/WEB-INF/pages/wqstravel/country/countryEdit.ftl</result>
+		</action>
+	
+	
+		<action name="doBeautifulCountryEdit" class="beautifulCountryAction" method="doBeautifulCountryEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- 名镇信息-沙田画卷-->
+		<action name="getTownPictureList" class="wqsTownPicturetAction" method="getTownPictureList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/shatian/shatianList.ftl</result>
+		</action>
+		<action name="toAddTownPicture" class="wqsTownPicturetAction" method="toAddTownPicture">
+			<result name="success">/WEB-INF/pages/wqstravel/town/shatian/shatianAdd.ftl</result>
+		</action>
+		<action name="doAddTownPictureSave" class="wqsTownPicturetAction" method="doAddTownPictureSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownPictureDelete" class="wqsTownPicturetAction" method="doTownPictureDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownOnePictureDelete" class="wqsTownPicturetAction" method="doTownOnePictureDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="toAddPicList" class="wqsTownPicturetAction" method="toAddPicList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/shatian/shatianPicAdd.ftl</result>
+		</action>
+		<action name="viewPicList" class="wqsTownPicturetAction" method="viewPicList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/shatian/shatianPicList.ftl</result>
+		</action>
+	
+		<action name="toPicEdit" class="wqsTownPicturetAction" method="toPicEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/town/shatian/shatianEdit.ftl</result>
+		</action>
+	
+	
+		<action name="doPictureEdit" class="wqsTownPicturetAction" method="doPictureEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<!-- 名镇信息-企业名录 -->
+		<action name="getTownEntList" class="wqsTownEntAction" method="getTownEntList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/ent/townEntList.ftl</result>
+		</action>
+		<action name="doTownEntDelete" class="wqsTownEntAction" method="doTownEntDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownEntAdd" class="wqsTownEntAction" method="doTownEntAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/town/ent/townEntAdd.ftl</result>
+		</action>
+		<action name="doTownEntSave" class="wqsTownEntAction" method="doTownEntSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownEntUpload" class="wqsTownEntAction" method="doTownEntUpload">
+			<result name="success">/WEB-INF/pages/wqstravel/town/ent/townEntUpload.ftl</result>
+		</action>
+		<action name="doTownEntUploadSubmit" class="wqsTownEntAction" method="doTownEntUploadSubmit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		<action name="doTownEntEdit" class="wqsTownEntAction" method="doTownEntEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/town/ent/townEntEdit.ftl</result>
+		</action>
+		
+		<action name="doTownEntEditSubmit" class="wqsTownEntAction" method="doTownEntEditSubmit">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		
+		
+		<!-- 预定服务  -->
+		<action name="getHotelOrderList" class="wqsBookingAction" method="getHotelOrderList">
+			<result name="success">/WEB-INF/pages/wqstravel/booking/hotelOrderList.ftl</result>
+		</action>
+		<action name="getFoodOrderList" class="wqsBookingAction" method="getFoodOrderList">
+			<result name="success">/WEB-INF/pages/wqstravel/booking/foodOrderList.ftl</result>
+		</action>
+		<!-- 名镇视频 -->
+		<action name="getTownVideoList" class="wqsTownVideoAction" method="getTownVideoList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/video/townVideoList.ftl</result>
+		</action>
+		<action name="getTownVideoQuery" class="wqsTownVideoAction" method="getTownVideoQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/town/video/townVideoList.ftl</result>
+		</action>
+		<action name="doTownVideoAdd" class="wqsTownVideoAction" method="doTownVideoAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/town/video/townVideoAdd.ftl</result>
+		</action>
+		<action name="doTownVideoSave" class="wqsTownVideoAction" method="doTownVideoSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownVideoEdit" class="wqsTownVideoAction" method="doTownVideoEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/town/video/townVideoEdit.ftl</result>
+		</action>
+		<action name="doTownVideoUpdate" class="wqsTownVideoAction" method="doTownVideoUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownVideoDelete" class="wqsTownVideoAction" method="doTownVideoDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<!-- 名镇信息-->
+		<action name="getTownMsgList" class="wqsTownMsgAction" method="getTownMsgList">
+			<result name="success">/WEB-INF/pages/wqstravel/town/msg/townMsgList.ftl</result>
+		</action>
+		<action name="doTownMsgEdit" class="wqsTownMsgAction" method="doTownMsgEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/town/msg/townMsgEdit.ftl</result>
+		</action>
+
+		<action name="doTownMsgUpdate" class="wqsTownMsgAction" method="doTownMsgUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownMsgAdd" class="wqsTownMsgAction" method="doTownMsgAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/town/msg/townMsgAdd.ftl</result>
+		</action>
+		<action name="doTownMsgSave" class="wqsTownMsgAction" method="doTownMsgSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownMsgDelete" class="wqsTownMsgAction" method="doTownMsgDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="getTownMsgQuery" class="wqsTownMsgAction" method="getTownMsgQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/town/msg/townMsgList.ftl</result>
+		</action>
+		<!-- 沙田画卷 -->
+		
+		<!-- 万顷沙/南沙新闻 -->
+		<action name="getTownNewsList" class="wqsTownMsgAction" method="getTownNewsList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNewsList.ftl</result>
+		</action>
+		<action name="doTownNewsEdit" class="wqsTownMsgAction" method="doTownNewsEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNewsEdit.ftl</result>
+		</action>
+		<action name="doTownNewsUpdate" class="wqsTownMsgAction" method="doTownNewsUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownNewsAdd" class="wqsTownMsgAction" method="doTownNewsAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNewsAdd.ftl</result>
+		</action>
+		<action name="doTownNewsSave" class="wqsTownMsgAction" method="doTownNewsSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownNewsDelete" class="wqsTownMsgAction" method="doTownNewsDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="getTownNewsQuery" class="wqsTownMsgAction" method="getTownNewsQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNewsList.ftl</result>
+		</action>
+		
+		<!-- 医疗服务 -->
+		<action name="getHospitalList" class="wqsHospitalAction" method="getHospitalList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/hospitalList.ftl</result>
+		</action>
+		<action name="doHospitalAdd" class="wqsHospitalAction" method="doHospitalAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/hospitalAdd.ftl</result>
+		</action>
+		<action name="doHospitalSave" class="wqsHospitalAction" method="doHospitalSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		    <result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doHospitalDelete" class="wqsHospitalAction" method="doHospitalDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		<action name="toHospitalEdit" class="wqsHospitalAction" method="toHospitalEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/hospitalEdit.ftl</result>
+		</action>
+		<action name="doHospitalEdit" class="wqsHospitalAction" method="doHospitalEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		    <result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		
+		<!-- 交通信息 -->
+		<action name="getTrafficReguList" class="wqsTrafficReguAction" method="getTrafficReguList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/trafficReguList.ftl</result>
+		</action>
+		
+		<action name="doTrafficReguAdd" class="wqsTrafficReguAction" method="doTrafficReguAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/trafficReguAdd.ftl</result>
+		</action>
+		
+		<action name="doTrafficReguSave" class="wqsTrafficReguAction" method="doTrafficReguSave">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTrafficReguDelete" class="wqsTrafficReguAction" method="doTrafficReguDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		<action name="doTrafficReguUpdate" class="wqsTrafficReguAction" method="doTrafficReguUpdate">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		<action name="toTrafficReguEdit" class="wqsTrafficReguAction" method="toTrafficReguEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/trafficReguEdit.ftl</result>
+		</action>
+		
+		
+		<!-- 南沙新闻 -->
+		<action name="getTownNsNewsList" class="wqsTownMsgAction" method="getTownNsNewsList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNsNewsList.ftl</result>
+		</action>
+		<action name="doTownNsNewsEdit" class="wqsTownMsgAction" method="doTownNsNewsEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNsNewsEdit.ftl</result>
+		</action>
+		<action name="doTownNsNewsUpdate" class="wqsTownMsgAction" method="doTownNsNewsUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownNsNewsAdd" class="wqsTownMsgAction" method="doTownNsNewsAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNsNewsAdd.ftl</result>
+		</action>
+		<action name="doTownNsNewsSave" class="wqsTownMsgAction" method="doTownNsNewsSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownNsNewsDelete" class="wqsTownMsgAction" method="doTownNsNewsDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="getTownNsNewsQuery" class="wqsTownMsgAction" method="getTownNsNewsQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townNsNewsList.ftl</result>
+		</action>
+		<!-- 国内新闻 -->
+		<action name="getTownGnNewsList" class="wqsTownMsgAction" method="getTownGnNewsList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townGnNewsList.ftl</result>
+		</action>
+		<action name="doTownGnNewsEdit" class="wqsTownMsgAction" method="doTownGnNewsEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townGnNewsEdit.ftl</result>
+		</action>
+		<action name="doTownGnNewsUpdate" class="wqsTownMsgAction" method="doTownGnNewsUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownGnNewsAdd" class="wqsTownMsgAction" method="doTownGnNewsAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townGnNewsAdd.ftl</result>
+		</action>
+		<action name="doTownGnNewsSave" class="wqsTownMsgAction" method="doTownGnNewsSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownGnNewsDelete" class="wqsTownMsgAction" method="doTownGnNewsDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="getTownGnNewsQuery" class="wqsTownMsgAction" method="getTownGnNewsQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townGnNewsList.ftl</result>
+		</action>
+		<!-- 招聘信息 -->
+		<action name="getTownJobsList" class="wqsTownMsgAction" method="getTownJobsList">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townJobsList.ftl</result>
+		</action>
+		<action name="doTownJobsEdit" class="wqsTownMsgAction" method="doTownJobsEdit">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townJobsEdit.ftl</result>
+		</action>
+		<action name="doTownJobsUpdate" class="wqsTownMsgAction" method="doTownJobsUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownJobsAdd" class="wqsTownMsgAction" method="doTownJobsAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townJobsAdd.ftl</result>
+		</action>
+		<action name="doTownJobsSave" class="wqsTownMsgAction" method="doTownJobsSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+		<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doTownJobsDelete" class="wqsTownMsgAction" method="doTownJobsDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="getTownJobsQuery" class="wqsTownMsgAction" method="getTownJobsQuery">
+			<result name="success">/WEB-INF/pages/wqstravel/local/townJobsList.ftl</result>
+		</action>
+		
+		<!-- 反馈管理配置 -->
+		<action name="feedbackList" class="nsTravelFeedbackAction" method="doFeedBackList">
+			<result name="success">/WEB-INF/pages/wqstravel/feedback/feedbackList.ftl</result>
+		</action>
+		<action name="addFeedbackReply" class="nsTravelFeedbackAction" method="addFeedbackReply">
+			<result name="success">/WEB-INF/pages/wqstravel/feedback/addFeedbackReply.ftl</result>
+		</action>
+		<action name="doFeedbackDelete" class="nsTravelFeedbackAction" method="dofeedbackDelete">
+			<result name="success">//WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doFeedbackReplySave" class="nsTravelFeedbackAction" method="doFeedbackReplySave">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>     
+		<action name="doFeedbackReplyDelete" class="nsTravelFeedbackAction" method="doFeedbackReplyDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doFeedbackDelete" class="nsTravelFeedbackAction" method="doFeedbackDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<!-- 接口配置 -->
+		<action name="getInterfaceList" class="interfaceAction" method="getInterfaceList">
+			<result name="success">/WEB-INF/pages/business/interfaceList.ftl</result>
+		</action>
+		
+		
+		
+		<!-- 农特产品 -->
+		<action name="getFarmProduceList" class="specificFarmProduceAction" method="getFarmProduceList">
+			<result name="success">/WEB-INF/pages/wqstravel/farmproduce/farmProduceList.ftl</result>
+		</action>
+		<action name="doFarmProduceAdd" class="specificFarmProduceAction" method="doFarmProduceAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/farmproduce/farmProduceAdd.ftl</result>
+		</action>
+		
+		<action name="toEditFarmProduce" class="specificFarmProduceAction" method="toEditFarmProduce">
+			<result name="success">/WEB-INF/pages/wqstravel/farmproduce/farmProduceEdit.ftl</result>
+		</action>
+		
+		<action name="doFarmProduceSave" class="specificFarmProduceAction" method="doFarmProduceSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doFarmProduceUpdate" class="specificFarmProduceAction" method="doFarmProduceUpdate">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doFarmProduceDelete" class="specificFarmProduceAction" method="doFarmProduceDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<!-- END -->
+		
+		<!-- 酒店信息管理 -->
+		<action name="getHotelList" class="hotelAction" method="getHotelList">
+			<result name="success">/WEB-INF/pages/wqstravel/hotel/hotelList.ftl</result>
+		</action>
+		<action name="getHotelDetail" class="hotelAction" method="getHotelDetail">
+			<result name="success">/WEB-INF/pages/wqstravel/hotel/hotelDetail.ftl</result>
+		</action>
+		<action name="doHotelAdd" class="hotelAction" method="doHotelAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/hotel/hotelAdd.ftl</result>
+		</action>
+		<action name="doHotelSave" class="hotelAction" method="doHotelSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doHotelDelete" class="hotelAction" method="doHotelDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="toEditHotel" class="hotelAction" method="toEditHotel">
+			<result name="success">/WEB-INF/pages/wqstravel/hotel/hotelEdit.ftl</result>
+		</action>
+		<action name="doHotelEdit" class="hotelAction" method="doHotelEdit">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		
+		<!-- 餐馆信息管理 -->
+		<action name="getRestaurantList" class="restaurantAction" method="getRestaurantList">
+			<result name="success">/WEB-INF/pages/wqstravel/restaurant/restaurantList.ftl</result>
+		</action>
+		<action name="getRestaurantDetail" class="restaurantAction" method="getRestaurantDetail">
+			<result name="success">/WEB-INF/pages/wqstravel/restaurant/restaurantDetail.ftl</result>
+		</action>
+		<action name="doRestaurantAdd" class="restaurantAction" method="doRestaurantAdd">
+			<result name="success">/WEB-INF/pages/wqstravel/restaurant/restaurantAdd.ftl</result>
+		</action>
+		<action name="doRestaurantSave" class="restaurantAction" method="doRestaurantSave">
+			<interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="doRestaurantDelete" class="restaurantAction" method="doRestaurantDelete">
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<action name="toEditRestaurant" class="restaurantAction" method="toEditRestaurant">
+			<result name="success">/WEB-INF/pages/wqstravel/restaurant/restaurantEdit.ftl</result>
+		</action>
+		<action name="doRestaurantEdit" class="restaurantAction" method="doRestaurantEdit">
+			 <interceptor-ref name="fileUploadStack" />
+			<interceptor-ref name="myDefaultWebStack" />
+			<result name="success">/WEB-INF/pages/wqstravel/tips.ftl</result>
+		</action>
+		<!-- END -->
+	</package>
+	
+</xwork>

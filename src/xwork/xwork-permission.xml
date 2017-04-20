@@ -1,0 +1,94 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<package name="permission" extends="default" namespace="/permission">
+		<action name="listModule" class="permissionAction" method="listModule">
+	    	<result name="success">/WEB-INF/pages/permission/adminmodule.ftl</result>
+	    </action>
+	    	<action name="queryModule" class="permissionAction" method="queryModule">
+	    	<result name="success">/WEB-INF/pages/permission/adminmodule.ftl</result>
+	    </action>
+	    <action name="goAddModule" class="permissionAction" method="goAddModule">
+	    	<result name="success">/WEB-INF/pages/permission/addadminmodule.ftl</result>
+	    </action>
+	    <action name="addModule" class="permissionAction" method="addModule">
+	    	<result name="success" type="redirect">/permission/listModule.action</result>
+	    </action>
+	     <action name="goModifyModule" class="permissionAction" method="goModifyModule">
+	    	<result name="success">/WEB-INF/pages/permission/modadminmodule.ftl</result>
+	    </action>
+	    <action name="modifyModule" class="permissionAction" method="modifyModule">
+	    	<result name="success" >/WEB-INF/pages/permission/modmoduleSub.ftl</result>
+	    </action>
+	    <action name="deleteModule" class="permissionAction" method="deleteModule">
+	    	<result name="success" type="redirect">/permission/listModule.action</result>
+	    </action>
+	    <action name="goOrderModule" class="permissionAction" method="goOrderModule">
+	    	<result name="success">/WEB-INF/pages/permission/orderadminmodule.ftl</result>
+	    </action>
+	    <action name="orderModule" class="permissionAction" method="orderModule">
+	    	<result name="success" type="redirect">/permission/listModule.action</result>
+	    </action>
+	    
+	    
+	    
+	    <action name="adminRoleList" class="permissionAction" method="adminRoleList">
+				<result>/WEB-INF/pages/permission/adminroleiterator.ftl</result>
+		</action>
+		<action name="goAddRole" class="permissionAction" method="goAddRole">
+				<result>/WEB-INF/pages/permission/addadminrole.ftl</result>
+		</action>
+		<action name="addAdminRole" class="permissionAction" method="addRole">
+				<result name="success">/WEB-INF/pages/permission/addadminroleSuc.ftl</result>
+		</action>
+		<action name="deleteAdminRole" class="permissionAction" method="deleteRoles">
+				<result name="success">/WEB-INF/pages/permission/delAdminroleSuc.ftl</result>
+		</action>
+		<action name="goModifyAdminRole" class="permissionAction" method="findRoleDetail">
+			<result>/WEB-INF/pages/permission/modifyadminrole.ftl</result>
+		</action>
+		<action name="modifyAdminRole" class="permissionAction" method="modifyRole">
+			<result name="success">/WEB-INF/pages/permission/modadminroleSuc.ftl</result>
+		</action>
+		<action name="goModifyAdminRolePermission" class="permissionAction" method="findRolePermissionDetail">
+			<result>/WEB-INF/pages/permission/modifyadminrole.ftl</result>
+		</action>
+		
+		
+		<action name="goModifyAdminRolePermission" class="permissionAction" method="goModifyRolePermission">
+			<result>/WEB-INF/pages/permission/modifyadminrolepermission.ftl</result>
+		</action>
+		<action name="goModifyPermissionPage" class="permissionAction" method="goModifyPermissionPage">
+			<result>/WEB-INF/pages/permission/modifypermissionpage.ftl</result>
+		</action>
+		<action name="modifyAdminRolePermission" class="permissionAction" method="modifyRolePermission">
+			<result>/WEB-INF/pages/permission/temp.ftl</result>
+		</action>
+		
+		
+		<action name="adminList" class="permissionAction" method="getAdminList">
+			<result>/WEB-INF/pages/permission/administrator.ftl</result>
+		</action>
+		<action name="goAddAdmin" class="permissionAction" method="goAddAdmin">
+			<result>/WEB-INF/pages/permission/addadministrator.ftl</result>
+		</action>
+		<action name="addAdmin" class="permissionAction" method="addAdmin">
+			<result name="success">/WEB-INF/pages/permission/addAdministratorSuc.ftl</result>
+		</action>
+		<action name="goModifyAdmin" class="permissionAction" method="goModifyAdmin">
+			<result>/WEB-INF/pages/permission/modadministrator.ftl</result>
+		</action>
+		<action name="modifyAdmin" class="permissionAction" method="modifyAdmin">
+			<result name="success">/WEB-INF/pages/permission/modadminSuc.ftl</result>
+		</action>
+		<action name="deleteAdmins" class="permissionAction" method="deleteAdmins">
+			<result name="success">/WEB-INF/pages/permission/delAdministratorSuc.ftl</result>
+		</action>
+		<action name="changePassword" class="permissionAction" method="changePassword">
+			<result name="success">/WEB-INF/pages/permission/changePassword.ftl</result>
+		</action>
+		<action name="changePasswordInit" class="permissionAction" method="changePasswordInit">
+			<result name="success">/WEB-INF/pages/permission/changePassword.ftl</result>
+		</action>
+	</package>
+</xwork>

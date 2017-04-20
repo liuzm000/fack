@@ -1,0 +1,35 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<include file="webwork-default.xml"/>
+  	<package name="default" extends="webwork-default">
+  		<result-types>
+  			<result-type name="text" class="cn.eshore.mismp.common.RendTextResult"/>
+  			<result-type name="freemarker" class="com.opensymphony.webwork.views.freemarker.FreemarkerResult" default="true"/>
+      		<result-type name="stream" class="com.opensymphony.webwork.dispatcher.StreamResult"/>
+      		<result-type name="excel" class="cn.eshore.mismp.common.ExcelResult"/>
+      		<result-type name="chart" class="cn.eshore.mismp.common.ChartResult" />
+  		</result-types>
+  		<interceptors>
+  			<interceptor-stack name="myDefaultWebStack">
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+            <interceptor-stack name="tokenStack">
+	            <interceptor-ref name="basicStack"/>
+            	<interceptor-ref name="token"/>
+            </interceptor-stack>
+  		</interceptors>
+  		<default-interceptor-ref name="myDefaultWebStack"/>
+  		<global-results>  		  
+            <result name="error" type="dispatcher">/WEB-INF/pages/common/error/error.jsp</result>
+            <result name="invalid.token" type="dispatcher">/WEB-INF/pages/common/error/error.jsp</result>
+            <result name="exception" type="dispatcher">/WEB-INF/pages/common/error/error.jsp</result>
+            <result name="persistenException" type="dispatcher">/WEB-INF/pages/common/error/runtimeError.jsp</result>            
+        </global-results>
+        
+        <global-exception-mappings>
+		   <exception-mapping exception="java.lang.Exception" result="exception"/>
+		   <exception-mapping exception="org.springframework.dao.DataAccessException" result="persistenException"/>
+	    </global-exception-mappings>
+  	</package>
+</xwork>

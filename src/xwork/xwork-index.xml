@@ -1,0 +1,21 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1//EN" 
+    "http://www.opensymphony.com/xwork/xwork-1.1.dtd">
+<xwork>
+	<!-- 在此处写首页公用东西-->
+	<package name="index" extends="default">
+		<action name="leftFrame" class="homeAction" method="leftFrame">
+			<result name="success">/WEB-INF/pages/left.ftl</result>
+		</action>
+		<action name="mainFrame" class="homeAction" method="mainFrame">
+			<result name="success">/WEB-INF/pages/right.ftl</result>
+		</action>
+		<action name="login" class="homeAction" method="login">
+		    <result name="fail" type="redirect">/index.jsp</result>
+			<result name="success">/WEB-INF/pages/index.ftl</result>
+		</action>
+		<action name="logout" class="homeAction" method="logout">
+			<result name="success" type="redirect">/logout.jsp</result>
+		</action>
+	</package>
+
+</xwork>

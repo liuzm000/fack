@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.4.1  Built on : Aug 13, 2008 (05:03:35 LKT) -->
+<serviceGroup>
+    <service name="MessageNotificationService">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="cn.com.chinatelecom.www.wsdl.ctcc.multimedia_messaging.notification.v2_2.service.MessageNotificationServiceMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">cn.com.chinatelecom.www.wsdl.ctcc.multimedia_messaging.notification.v2_2.service.MessageNotificationServiceSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="notifyMessageDeliveryReceipt" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.chinatelecom.com.cn/wsdl/ctcc/multimedia_messaging/notification/v2_2/interface">
+            <actionMapping>\"\"</actionMapping>
+            <outputActionMapping>http://www.chinatelecom.com.cn/wsdl/ctcc/multimedia_messaging/notification/v2_2/interface/MessageNotification/notifyMessageDeliveryReceiptResponse</outputActionMapping>
+        </operation>
+        <operation name="notifyMessageReception" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://www.chinatelecom.com.cn/wsdl/ctcc/multimedia_messaging/notification/v2_2/interface">
+            <actionMapping>\"\"</actionMapping>
+            <outputActionMapping>http://www.chinatelecom.com.cn/wsdl/ctcc/multimedia_messaging/notification/v2_2/interface/MessageNotification/notifyMessageReceptionResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

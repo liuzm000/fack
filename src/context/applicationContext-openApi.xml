@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="baseProcess"  abstract="true" class="cn.eshore.mismp.business.service.framework.base.BusinessProcessDispacher">
+    	<property name="businessSupportService">
+			<ref bean="businessSupportService" />
+		</property>
+	</bean>
+	
+	
+    <bean id="base" class="cn.eshore.mismp.business.service.process.BaseBusinessProcess" parent="baseProcess" />
+	
+	<bean id="baseIcon" class="cn.eshore.mismp.business.service.process.BaseIconBusinessProcess" parent="baseProcess" />
+	
+	<bean id="baseIconMedia" class="cn.eshore.mismp.business.service.process.BaseIconMediaBusinessProcess" parent="baseProcess" />
+	
+</beans>
